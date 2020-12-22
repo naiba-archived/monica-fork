@@ -2,6 +2,7 @@
 
 ### New features:
 
+* Add the notion of AddressBooks
 * Allow customization of life event types
 
 ### Enhancements:
@@ -10,7 +11,8 @@
 
 ### Fixes:
 
-*
+* Fix update activity with emotions
+* Fix bad return with wrong credential on oauth/login api
 
 
 # RELEASED VERSIONS:
