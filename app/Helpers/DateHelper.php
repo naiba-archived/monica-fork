@@ -4,7 +4,7 @@ namespace App\Helpers;
 
 use function Safe\date;
 use function Safe\strtotime;
-use Illuminate\Support\Carbon;
+use Carbon\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 
@@ -56,7 +56,7 @@ class DateHelper
      */
     public static function parseDate($date, $timezone = null): ?Carbon
     {
-        if (! $date instanceof Carbon) {
+        if (!$date instanceof Carbon) {
             try {
                 $date = Carbon::parse($date);
             } catch (\Exception $e) {
@@ -89,7 +89,7 @@ class DateHelper
         if ($date instanceof \App\Models\Instance\SpecialDate) {
             $date = $date->date;
         }
-        if (! $date instanceof Carbon) {
+        if (!$date instanceof Carbon) {
             $date = Carbon::parse($date);
         }
 
@@ -110,7 +110,7 @@ class DateHelper
         if ($date instanceof \App\Models\Instance\SpecialDate) {
             $date = $date->date;
         }
-        if (! $date instanceof Carbon) {
+        if (!$date instanceof Carbon) {
             $date = Carbon::parse($date);
         }
 
