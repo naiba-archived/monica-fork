@@ -24,7 +24,8 @@
     "prepublish": "yarn run snyk-protect",
     "delete:reports": "rm results/cypress/* || true",
     "pree2e": "npm run delete:reports",
-    "migrate": "DB_CONNECTION=testing php artisan migrate:fresh && DB_CONNECTION=testing php artisan db:seed"
+    "migrate": "DB_CONNECTION=testing php artisan migrate:fresh && DB_CONNECTION=testing php artisan db:seed",
+    "lang": "php artisan lang:generate && php artisan lang:js"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",

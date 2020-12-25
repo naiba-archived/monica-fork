@@ -61,7 +61,7 @@ return [
             'region' => env('AWS_DEFAULT_REGION', env('AWS_REGION')),
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
-            'endpoint' => env('AWS_ENDPOINT', env('AWS_SERVER', '') ? 'https://'.env('AWS_SERVER') : null),
+            'endpoint' => env('AWS_ENDPOINT', env('AWS_SERVER', '') ? 'https://' . env('AWS_SERVER') : null),
             'cache' => [
                 'store' => env('S3_CACHE_STORE', env('CACHE_DRIVER', 'file')),
                 'expire' => env('S3_CACHE_EXPIRE', 600),
@@ -82,8 +82,8 @@ return [
     |
     */
 
-    'links' => [
-        public_path('storage') => storage_path('app/public'),
-    ],
+    // 'links' => [
+    //     public_path('storage') => storage_path('app/public'),
+    // ],
 
 ];

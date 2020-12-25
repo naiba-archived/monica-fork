@@ -210,6 +210,8 @@ return [
     'reminders_type_year' => '年',
     'reminders_birthday' => ':name的生日',
     'reminders_free_plan_warning' => '您当前使用的是免费版。若需要邮件提醒，请升级您的账户。',
+    'reminders_calendar_lunar' => '农历(阴历)',
+    'reminders_calendar_solar' => '公历(阳历)',
 
     // relationships
     'relationship_form_add' => '添加一个新的关系',

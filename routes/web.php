@@ -33,6 +33,8 @@ Route::middleware(['auth', '2fa'])->group(function () {
 });
 
 Route::middleware(['auth', 'verified', 'mfa'])->group(function () {
+    Route::get('/storage/{folder}/{file}', 'StorageController@download')->name('download');
+
     Route::name('dashboard.')->group(function () {
         Route::get('/dashboard', 'DashboardController@index')->name('index');
         Route::get('/dashboard/calls', 'DashboardController@calls');
@@ -260,7 +262,7 @@ Route::middleware(['auth', 'verified', 'mfa'])->group(function () {
             Route::get('/settings/subscriptions/archive', 'Settings\\SubscriptionsController@archive')->name('archive');
             Route::post('/settings/subscriptions/archive', 'Settings\\SubscriptionsController@processArchive');
             Route::get('/settings/subscriptions/downgrade/success', 'Settings\\SubscriptionsController@downgradeSuccess')->name('downgrade.success');
-            if (! App::environment('production')) {
+            if (!App::environment('production')) {
                 Route::get('/settings/subscriptions/forceCompletePaymentOnTesting', 'Settings\\SubscriptionsController@forceCompletePaymentOnTesting')->name('forceCompletePaymentOnTesting');
             }
         });
