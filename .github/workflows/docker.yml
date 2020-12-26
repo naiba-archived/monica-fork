@@ -13,6 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
+      - name: Install dependencies
+        uses: php-actions/composer@v5
+        with:
+          args: --no-interaction --no-suggest --no-dev --ignore-platform-reqs
+
       - name: Log into registry
         run: echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
 
