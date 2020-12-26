@@ -16,6 +16,7 @@ jobs:
       - name: Install dependencies
         uses: php-actions/composer@v5
         with:
+          php_version: 7.4
           args: --no-interaction --no-suggest --no-dev --ignore-platform-reqs
 
       - name: Log into registry
@@ -23,5 +24,6 @@ jobs:
 
       - name: Build and push image
         run: |
+          ls -al vendor
           docker build -t ghcr.io/${{ github.repository_owner }}/monica -f Dockerfile .
           docker push ghcr.io/${{ github.repository_owner }}/monica
