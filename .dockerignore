@@ -40,6 +40,7 @@ storage/framework/views/*
 storage/logs/*
 .styleci.yml
 .travis.yml*
+vendor/
 yarn-error.log
 .sonarlint/
 cypress.env.json
