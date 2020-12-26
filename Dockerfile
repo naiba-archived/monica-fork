@@ -12,4 +12,4 @@ RUN cd /monica && \
 EXPOSE 8000
 
 CMD cron f && \
-    /opt/bitnami/php/bin/php /monica/artisan serve --host 0.0.0.0
+    /opt/bitnami/php/bin/php /monica/artisan serve --host 0.0.0.0 --port 8000
