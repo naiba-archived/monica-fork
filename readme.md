@@ -31,6 +31,7 @@
     ```
     docker-compose exec monica php /monica/artisan key:generate
     docker-compose exec monica php /monica/artisan migrate
+    docker-compose exec monica php /monica/artisan passport:keys
     ```
 4. 访问 `ip:8080`，可以使用反向代理包装一下
 
