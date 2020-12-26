@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::permanentRedirect('/.well-known/carddav', '/dav/');
+Route::permanentRedirect('/.well-known/caldav', '/dav/');
+Route::permanentRedirect('/.well-known/security.txt', '/security.txt');
+
 Route::get('/', 'Auth\LoginController@showLoginOrRegister')->name('loginRedirect');
 
 Auth::routes(['verify' => true]);

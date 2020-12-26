@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+  mariadb:
+    image: mariadb:10
+    restart: always
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    ports:
+      - 8080:8000
+    environment:
+      MYSQL_ROOT_PASSWORD: "mysqrootpass"
+      MYSQL_ROOT_HOST: "%"
+
+  monica:
+    image: ghcr.io/naiba/monica
+    restart: always
+    depends_on:
+      - mariadb
+    volumes:
+      - ./storage:/monica/storage
