@@ -16,7 +16,7 @@ jobs:
       - name: Log into registry
         run: echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
 
-      - name: Build and push dasbboard image
+      - name: Build and push image
         run: |
           docker build -t ghcr.io/${{ github.repository_owner }}/monica -f Dockerfile .
           docker push ghcr.io/${{ github.repository_owner }}/monica
