@@ -26,6 +26,9 @@
 3. 初始化数据库
     ```
     docker-compose exec mariadb mysql -uroot -pmysqrootpass -e "CREATE DATABASE monica CHARACTER SET utf8 COLLATE utf8_general_ci;"
+    ```
+4. 初始化系统
+    ```
     docker-compose exec monica php /monica/artisan key:generate
     docker-compose exec monica php /monica/artisan migrate
     ```
