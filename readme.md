@@ -17,9 +17,7 @@
     mkdir monica && cd monica
     wget https://raw.githubusercontent.com/naiba/monica-fork/master/docker-compose.yml
     wget -O .env https://raw.githubusercontent.com/naiba/monica-fork/master/.env.example
-    mkdir -p storage/framework/sessions
-    mkdir -p storage/framework/cache
-    mkdir -p storage/framework/views
+    mkdir -p storage/framework/{sessions,cache,views}
     docker-compose up -d
     ```
 2. 修改一下 `.env` 里面的配置项
