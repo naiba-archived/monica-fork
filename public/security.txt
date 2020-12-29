@@ -1,4 +1,4 @@
 # Our security address
 
-Contact: security@monicahq.com
+Contact: hi@nai.ba
 Disclosure: Full
