@@ -10,6 +10,8 @@
 1. 支持农历(阴历)日期的提醒（很重要，许多人过农历生日、纪念日）
 2. 对 storage 的访问增加了权限验证（排除了穷举照片、文档的风险）
 
+**体验一下不亏：[demo](https://monica.naibahq.com/register?lang=zh)**
+
 ## 安装指北
 
 1. 请先预装 Docker、`docker-compose`
