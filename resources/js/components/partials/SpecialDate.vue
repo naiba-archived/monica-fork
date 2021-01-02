@@ -140,10 +140,10 @@
           v-model.lazy="hasBirthdayReminder"
           :name="'addReminder'"
           :value="'addReminder'"
-          :dclass="['flex', dirltr ? 'mr2' : 'ml2']"
+          :dclass="[ 'flex', dirltr ? 'mr2' : 'ml2' ]"
         >
           <template slot="label">
-            {{ $t("people.people_add_reminder_for_birthday") }}
+            {{ $t('people.people_add_reminder_for_birthday') }}
           </template>
         </form-checkbox>
       </div>
